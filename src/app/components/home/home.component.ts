@@ -11,4 +11,8 @@ import { PortafolioComponent } from '../portafolio/portafolio.component';
 })
 export class HomeComponent {
 
+  goToPortfolio(): void {
+    window.open('https://stiven-arboleda.vercel.app/', '_blank');
+  }
+
 }
