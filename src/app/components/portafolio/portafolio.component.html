@@ -1,0 +1,32 @@
+<section class="portafolio">
+  <h1 class="section-title">Explora mis artículos sobre ingeniería de software</h1>
+
+  <div class="carousel-container">
+    <button class="carousel-arrow left" (click)="prevSlide()" [disabled]="carouselIndex === 0">‹</button>
+
+    <div class="carousel-wrapper">
+      <div class="carousel-track" [style.transform]="'translateX(-' + (carouselIndex * (100 / carouselItemsPerView)) + '%)'">
+        <div class="carousel-slide" *ngFor="let article of articles">
+          <div class="portafolio-card">
+            <img [src]="article.image" alt="{{ article.title }}">
+            <div class="portafolio-info">
+              <h2>{{ article.title }}</h2>
+              <p>{{ article.description }}</p>
+              <a [routerLink]="'/articles/' + article.id" class="btn">Leer más</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button class="carousel-arrow right" (click)="nextSlide()" [disabled]="carouselIndex >= maxCarouselIndex">›</button>
+
+    <div class="carousel-dots">
+      <span
+        *ngFor="let dot of getDots(); let i = index"
+        (click)="goToSlide(i)"
+        [class.active]="i === carouselIndex"
+      >●</span>
+    </div>
+  </div>
+</section>

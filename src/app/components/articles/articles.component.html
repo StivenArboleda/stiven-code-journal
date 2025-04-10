@@ -1,0 +1,61 @@
+<div class="article-container" *ngIf="article">
+
+        <!-- Botón de volver -->
+    <button class="back-button" (click)="goBack()">
+        ← Volver
+    </button>
+
+  
+    <!-- Icono redondeado con fondo gris claro dentro de línea -->
+    <div class="article-header-line">
+      <hr />
+      <div class="icon-wrapper">
+        <img [src]="article.icono" [alt]="article.title" class="icon-image" />
+      </div>
+    </div>
+  
+    <!-- Título -->
+    <h1 class="article-title">{{ article.title }}</h1>
+  
+    <!-- Fecha -->
+    <p class="article-date">{{ article.date }}</p>
+  
+    <!-- Línea inferior -->
+    <hr class="line-bottom" />
+  
+    <!-- Contenido en dos columnas -->
+    <div class="article-columns">
+      <div class="column">
+        <p>{{ article.contentUno }}</p>
+      </div>
+      <div class="column">
+        <p>{{ article.contentDos }}</p>
+      </div>
+    </div>
+
+    <!-- Fragmento visual con imagen izquierda y texto a la derecha -->
+    <div class="article-fragment">
+        <div class="fragment-image">
+        <img [src]="article.image" [alt]="article.title" />
+        </div>
+        <div class="fragment-text">
+        <p>{{ article.fragmentContent }}</p>
+        </div>
+    </div>
+    <!-- Sección de columnas finales -->
+    <div class="article-columns-section" *ngIf="article.columnas && article.columnas.length">
+        <div class="columnFinal" *ngFor="let col of article.columnas">
+        <h3 class="columnFinal-title">{{ col.title }}</h3>
+        <p class="columnFinal-content">{{ col.content }}</p>
+        </div>
+    </div>
+  
+    <!-- Footer -->
+    <div class="article-footer">
+        <hr class="footer-line" />
+        <p class="footer-text">© Hecho por Stiven 2025. Todos los derechos reservados.  |  La evolución se desarrolla.</p>
+        <hr class="footer-line" />
+    </div>
+
+  </div>
+  

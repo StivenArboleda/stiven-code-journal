@@ -1,0 +1,18 @@
+<header class="navbar">
+  <div class="logo">
+    <img src="/Logo.png" alt="Logo Stiven" />
+  </div>
+  <nav [class.open]="menuOpen">
+    <ul>
+      <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
+      <li><a routerLink="/articles" routerLinkActive="active">Artículos</a></li>
+      <li><a routerLink="/portfolio" routerLinkActive="active">Mi Portafolio</a></li>
+      <li><a routerLink="/contact" routerLinkActive="active">Contacto</a></li>
+    </ul>
+  </nav>
+  <div class="menu-toggle" (click)="toggleMenu()">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
+  </div>
+</header>
