@@ -1,0 +1,30 @@
+<h2 class="formacion-titulo">MI FORMACIÓN</h2>
+<div class="formacion-container">
+  
+    <div class="formacion-columns-wrapper">
+      <!-- Columna izquierda: Formación profesional -->
+      <div class="formacion-column izquierda">
+        <h2 class="formacion-titulo">Formación profesional</h2>
+        <div class="uni-card">
+          <img src="assets/formacion/icon-Icesi.png" alt="Universidad ICESI" class="logo-uni" />
+          <p class="carrera">Ingeniería de Sistemas</p>
+          <p class="periodo">2018 - 2024</p>
+        </div>
+      </div>
+  
+      <!-- Línea vertical divisora -->
+      <div class="vertical-line"></div>
+  
+      <!-- Columna derecha: Formación continua -->
+      <div class="formacion-column derecha">
+        <h2 class="formacion-titulo">Formación continua</h2>
+        <div class="tech-grid">
+          <div class="tech-card" *ngFor="let item of tecnologias" (click)="abrirCertificado(item.link)">
+            <img [src]="item.logo" [alt]="item.nombre" class="tech-logo" />
+            <p class="tech-nombre">{{ item.nombre }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  

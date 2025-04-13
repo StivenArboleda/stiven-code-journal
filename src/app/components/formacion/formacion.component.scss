@@ -1,0 +1,168 @@
+.formacion-container {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 4rem 2rem;
+    position: relative;
+  }
+  
+  
+.formacion-columns-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 10rem; 
+    width: 100%;
+    max-width: 1200px;
+  }
+  
+  .formacion-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 1;
+    min-width: 300px;
+  }
+  
+  .formacion-titulo {
+    font-size: 1.8rem;
+    color: #000000;
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+  
+  .uni-card {
+    background-color: #EEEBE4;
+    padding: 2rem;
+    border-radius: 1.5rem;
+    text-align: center;
+    width: 100%;
+    max-width: 350px;
+    height: 350px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .logo-uni {
+    width: 100%;
+    max-width: 150px;
+    margin-bottom: 1.5rem;
+  }
+  
+.carrera,
+.periodo {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+.carrera {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 0.5rem;
+}
+
+.periodo {
+  font-size: 1.2rem;
+  color: #000000;
+}
+  
+  .vertical-line {
+    width: 3px;
+    background-color: #7b8794;
+    height: auto;
+    min-height: 300px;
+    border-radius: 1rem;
+    align-self: stretch;
+  }
+  
+  .tech-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+    gap: 1.2rem;
+    justify-items: center;
+    width: 100%;
+    max-width: 400px;
+  }
+  
+  .tech-card {
+    width: 120px;
+    height: 130px;
+    background-color: #EEEBE4;
+    border-radius: 1rem;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .tech-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .tech-logo {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+  }
+  
+  .tech-nombre {
+    color: #000000;
+    font-size: 1.3rem;
+    font-weight: bold;
+  }
+  
+  /* 🎯 Estilos responsivos */
+  @media (max-width: 768px) {
+    .formacion-container {
+      flex-direction: column;
+      align-items: center;
+      gap: 4rem;
+      padding: 3rem 1rem;
+    }
+  
+    .vertical-line {
+      display: none;
+    }
+  
+    .formacion-titulo {
+      font-size: 1.5rem;
+    }
+  
+    .uni-card {
+      max-width: 100%;
+    }
+  
+    .tech-grid {
+      grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+      max-width: 100%;
+    }
+  
+    .tech-card {
+        width: 100px;
+        height: 100px;
+        padding: 0.6rem;
+      }
+  
+      .tech-logo {
+        width: 35px;
+        height: 35px;
+      }
+  
+      .tech-nombre {
+        font-size: 0.9rem;
+        font-weight: bold;
+      }
+  }
+  
+  body {
+    font-family: 'Poppins', sans-serif;
+  }
+  
