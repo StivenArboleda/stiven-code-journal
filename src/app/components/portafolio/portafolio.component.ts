@@ -14,15 +14,15 @@ export class PortafolioComponent {
   articles = [
     {
       id: 1,
-      title: 'Microservicios con Spring Boot',
-      description: 'Descubre cómo diseñar una arquitectura de microservicios con Spring Boot.',
+      title: 'Introducción a la ingeniería de software',
+      description: 'Un poco acerca de la ingeniería de software, su importancia y todo lo que puede abarcar!',
       image: 'assets/images/microservicios.jpg'
     },
     {
       id: 2,
       title: 'Patrones de Diseño',
       description: 'Aprende los patrones de diseño más utilizados en el desarrollo backend con Java.',
-      image: '/Articulos/patrones.png'
+      image: 'assets/articulos/patrones.png'
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export class PortafolioComponent {
       id: 5,
       title: 'Testing en Java',
       description: 'Buenas prácticas y herramientas para testear tus aplicaciones Java.',
-      image: '/Articulos/patrones.png'
+      image: 'assets/articulos/patrones.png'
     }
   ];
 
@@ -89,6 +89,3 @@ export class PortafolioComponent {
     return Array(this.maxCarouselIndex + 1);
   }
 }
-
-
-

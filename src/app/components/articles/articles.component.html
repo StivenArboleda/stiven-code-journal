@@ -26,10 +26,10 @@
     <!-- Contenido en dos columnas -->
     <div class="article-columns">
       <div class="column">
-        <p>{{ article.contentUno }}</p>
+        <div [innerHTML]="article.contentUno"></div>
       </div>
       <div class="column">
-        <p>{{ article.contentDos }}</p>
+        <div [innerHTML]="article.contentDos"></div>
       </div>
     </div>
 
@@ -46,7 +46,7 @@
     <div class="article-columns-section" *ngIf="article.columnas && article.columnas.length">
         <div class="columnFinal" *ngFor="let col of article.columnas">
         <h3 class="columnFinal-title">{{ col.title }}</h3>
-        <p class="columnFinal-content">{{ col.content }}</p>
+        <div class="columnFinal-content" [innerHTML]="col.content"></div>
         </div>
     </div>
   
