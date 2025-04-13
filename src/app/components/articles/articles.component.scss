@@ -156,6 +156,11 @@
     margin-top: 50px;
     padding: 30px 10px;
     border-radius: 12px;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50vw;
   
     // Ajuste dinámico: 2, 3 o 4 columnas según el ancho y cantidad
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -175,7 +180,7 @@
     }
   
     .columnFinal-content {
-      font-size: 17px;
+      font-size: 19px;
       color: #444;
       line-height: 1.5;
       text-align: justify;

@@ -1,0 +1,180 @@
+.proyectos {
+    text-align: center;
+    padding: 50px 30px;
+  }
+  
+  .section-title {
+    font-size: 38px;
+    color: #003366;
+    margin-bottom: 40px;
+  }
+  
+  /* === Carrusel === */
+  .carousel-container {
+    position: relative;
+    overflow: hidden;
+    padding-bottom: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .carousel-wrapper {
+    overflow: hidden;
+    width: 100%;
+  }
+  
+  .carousel-track {
+    display: flex;
+    transition: transform 0.4s ease-in-out;
+  }
+  
+  .carousel-slide {
+    flex: 0 0 calc(100% / 3);
+    box-sizing: border-box;
+    padding: 10px;
+  }
+  
+  .carousel-arrow {
+    position: absolute;
+    top: 45%;
+    transform: translateY(-50%);
+    background-color: #18777C;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    font-size: 24px;
+    z-index: 1;
+  
+    &.left {
+      left: 10px;
+    }
+  
+    &.right {
+      right: 10px;
+    }
+  }
+  
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 8px;
+  
+    span {
+      font-size: 18px;
+      cursor: pointer;
+      color: #ccc;
+  
+      &.active {
+        color: #18777C;
+      }
+    }
+  }
+  
+  /* === Estilo de las tarjetas de proyecto === */
+  .proyectos-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+  
+    &:hover {
+      transform: translateY(-5px);
+    }
+  
+    img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px 10px 0 0;
+      transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    }
+  
+    img:hover {
+      transform: scale(1.05);
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+    }
+  
+    .proyectos-info {
+      padding: 20px;
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+  
+      h2 {
+        font-size: 24px;
+        color: #18777C;
+        margin-bottom: 10px;
+      }
+  
+      p {
+        font-size: 16px;
+        color: #555;
+        flex-grow: 1;
+      }
+
+      .botones {
+        display: flex;
+        gap: 10px;
+        justify-content: center;
+        width: 100%   
+      }      
+      
+      .btn {
+        font-size: 17px;
+        padding: 8px 16px;
+        background: #18777C;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: background 0.3s ease;
+
+        &:hover {
+          background: #0055aa;
+        }
+      }
+    }
+  }
+  
+  /* === Responsive === */
+  @media (max-width: 1024px) {
+    .carousel-slide {
+      flex: 0 0 calc(100% / 2);
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .carousel-slide {
+      flex: 0 0 100%;
+    }
+  
+    .carousel-arrow {
+      font-size: 20px;
+      width: 36px;
+      height: 36px;
+    }
+  
+    .section-title {
+      font-size: 28px;
+    }
+  
+    .proyectos {
+      padding: 30px 15px;
+    }
+  
+    .proyecto-card .proyecto-info h2 {
+      font-size: 20px;
+    }
+  
+    .proyecto-card .proyecto-info p {
+      font-size: 14px;
+    }
+  }
+  

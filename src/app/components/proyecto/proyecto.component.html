@@ -1,0 +1,36 @@
+<div class="proyectos">
+    <h2 class="section-title">Proyectos personales</h2>
+  
+    <div class="carousel-container">
+        <button class="carousel-arrow left" (click)="prevSlide()" [disabled]="carouselIndex === 0">‹</button>
+
+
+      <div class="carousel-wrapper">
+        <div class="carousel-track" [style.transform]="'translateX(-' + (carouselIndex * (100 / carouselItemsPerView)) + '%)'">
+          <div class="carousel-slide" *ngFor="let proyecto of proyectos">
+            <div class="proyectos-card">
+              <img [src]="proyecto.imagen" [alt]="proyecto.titulo">
+              <div class="proyectos-info">
+                <h2>{{ proyecto.titulo }}</h2>
+                <p>{{ proyecto.descripcion }}</p>
+                <div class="botones">
+                  <a class="btn" *ngIf="proyecto.demo" [href]="proyecto.demo" target="_blank">Ver demo</a>
+                  <a class="btn" *ngIf="proyecto.repo" [href]="proyecto.repo" target="_blank">Repositorio</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+  
+      <button class="carousel-arrow right" (click)="nextSlide()" [disabled]="carouselIndex >= maxCarouselIndex">›</button>
+  
+      <div class="carousel-dots">
+        <span
+          *ngFor="let dot of getDots(); let i = index"
+          (click)="goToSlide(i)"
+          [class.active]="i === carouselIndex"
+        >●</span>
+      </div>
+  </div>
+  

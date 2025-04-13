@@ -14,9 +14,9 @@ export class PortafolioComponent {
   articles = [
     {
       id: 1,
-      title: 'Introducción a la ingeniería de software',
+      title: 'Ingeniería de software',
       description: 'Un poco acerca de la ingeniería de software, su importancia y todo lo que puede abarcar!',
-      image: 'assets/images/microservicios.jpg'
+      image: 'assets/articulos/ingenieria.png'
     },
     {
       id: 2,
@@ -28,19 +28,19 @@ export class PortafolioComponent {
       id: 3,
       title: 'Introducción a DevOps',
       description: 'Un vistazo a las mejores prácticas y herramientas clave en DevOps.',
-      image: 'assets/images/devops.jpg'
+      image: 'assets/articulos/devOps.png'
     },
     {
       id: 4,
       title: 'Clean Code',
       description: 'Descubre cómo escribir código limpio, legible y mantenible.',
-      image: 'assets/images/cleancode.jpg'
+      image: 'assets/articulos/cleanCode.png'
     },
     {
       id: 5,
       title: 'Testing en Java',
       description: 'Buenas prácticas y herramientas para testear tus aplicaciones Java.',
-      image: 'assets/articulos/patrones.png'
+      image: 'assets/articulos/testing.png'
     }
   ];
 

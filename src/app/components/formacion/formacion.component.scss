@@ -49,7 +49,7 @@
   
   .logo-uni {
     width: 100%;
-    max-width: 150px;
+    max-width: 300px;
     margin-bottom: 1.5rem;
   }
   
@@ -61,13 +61,13 @@
 }
 
 .carrera {
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-top: 0.5rem;
 }
 
 .periodo {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   color: #000000;
 }
   
@@ -91,7 +91,7 @@
   
   .tech-card {
     width: 120px;
-    height: 130px;
+    height: 120px;
     background-color: #EEEBE4;
     border-radius: 1rem;
     text-align: center;
@@ -101,6 +101,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+
+    padding: 0;
   }
   
   .tech-card:hover {
@@ -117,6 +119,7 @@
     color: #000000;
     font-size: 1.3rem;
     font-weight: bold;
+    margin: 10px;
   }
   
   /* 🎯 Estilos responsivos */
