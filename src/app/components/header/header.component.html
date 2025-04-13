@@ -4,10 +4,11 @@
   </div>
   <nav [class.open]="menuOpen">
     <ul>
-      <li><a routerLink="/" routerLinkActive="active">Inicio</a></li>
-      <li><a routerLink="/articles" routerLinkActive="active">Sobre mí</a></li>
-      <li><a routerLink="/portfolio" routerLinkActive="active">Formación</a></li>
-      <li><a routerLink="/articles" routerLinkActive="active">Artículos</a></li>
+      <li><a href="#inicio" (click)="cerrarMenu()">Inicio</a></li>
+      <li><a href="#sobremi" (click)="cerrarMenu()">Sobre mí</a></li>
+      <li><a href="#formacion" (click)="cerrarMenu()">Formación</a></li>
+      <li><a href="#proyectos" (click)="cerrarMenu()">Proyectos</a></li>
+      <li><a href="#articulos" (click)="cerrarMenu()">Artículos</a></li>
     </ul>
   </nav>
   <div class="menu-toggle" (click)="toggleMenu()">
