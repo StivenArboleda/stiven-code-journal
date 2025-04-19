@@ -22,7 +22,6 @@ export class ProyectoComponent {
       descripcion: 'La página web profesional de una peletería, se realizó con el acompañamiento del cliente, quien eligió paleta de colores, fuentes y la información de toda la página.',
       imagen: 'assets/proyectos/cap-peleteria.png',
       demo: 'https://david-peleteria.vercel.app/',
-      repo: 'https://github.com/StivenArboleda/DavidPeleteria'
     },
     {
       titulo: 'E-commerce',
@@ -30,7 +29,14 @@ export class ProyectoComponent {
       imagen: 'assets/proyectos/cap-ecommerce.png',
       demo: 'https://stivenarboledaecommerce.vercel.app/',
       repo: 'https://github.com/StivenArboleda/E-commerce'
+    },    
+    {
+      titulo: 'Sebas Protege',
+      descripcion: 'Es el boceto inicial de una página para buffet de abogados. Cuenta con página de Inicio, Firma, Tienda, Servicios a detalle. Contiene un diseño responsive.',
+      imagen: 'assets/proyectos/cap-sebas.png',
+      demo: 'https://sebas-protege.vercel.app/',
     },
+    
   ];
 
   
