@@ -1,0 +1,204 @@
+.timeline-wrapper {
+    padding-top: 0rem;
+    padding-bottom: 3rem;
+    max-width: 1200px;
+    margin: auto;
+
+    .section-title {
+        text-align: center;
+        color: #003366;
+        font-size: 2.2rem;
+        font-weight: bold;
+        margin-bottom: 3rem;
+    }
+}
+
+.timeline-container {
+    position: relative;
+    height: 500px;
+    overflow-y: auto;
+    padding: 1rem 0;
+    padding-right: 3rem;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+
+    scrollbar-width: none;
+}
+
+.timeline-scroll {
+    position: relative;
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 6px;
+        background-color: #18777C;
+        top: 0;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 2rem 0;
+    width: 100%;
+
+    .circle {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 18px;
+        height: 18px;
+        background-color: #18777C;
+        border-radius: 50%;
+        z-index: 2;
+    }
+
+    .content-box {
+        position: relative;
+        width: 35%;
+        background: white;
+        border-radius: 12px;
+        padding: 0.8rem 1.2rem;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        z-index: 2;
+        /* Añadimos el borde de la línea a la izquierda y derecha */
+        border-left: 4px solid transparent; 
+        border-right: 4px solid transparent;
+
+        h3 {
+            color: #18777C;
+            display: block;
+            text-align: center;
+        }
+
+        .title-empresa {
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+
+        .periodo {
+            font-weight: bold;
+            display: block;
+            text-align: center;
+        }
+
+        .brief-info {
+            display: block;
+        }
+
+        .full-info {
+            display: none;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+            background-color: #f9f9f9;
+
+            .brief-info {
+                display: none;
+            }
+
+            .full-info {
+                display: block;
+
+                h3 {
+                    color: #18777C;
+                }
+
+                .empresa {
+                    font-weight: bold;
+                    margin-top: 0.5rem;
+                }
+
+                .descripcion {
+                    margin: 0.5rem 0 1rem 0;
+                    font-size: 0.95rem;
+                    color: #444;
+                }
+            }
+        }
+    }
+
+    &.right .content-box {
+        margin-left: 38rem;
+        border-left: none; 
+        border-right: 5px solid #18777C; 
+    }
+
+    &.left .content-box {
+        margin-left: 6rem;
+        border-right: none; 
+        border-left: 5px solid #18777C; 
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .timeline-item {
+        flex-direction: column;
+        align-items: center;
+
+        .content-box {
+            width: 90% !important;
+            margin: 0 auto;
+            text-align: center;
+            padding: 1.2rem 1.5rem;
+            border-left: 4px solid #18777C;
+
+            &:hover {
+                transform: scale(1.03);
+            }
+        }
+
+        &.left .content-box,
+        &.right .content-box {
+            margin: 0 auto;
+        }
+
+        .circle {
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 1rem;
+        }
+    }
+
+    .timeline-scroll::before {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .circle {
+        display: none;
+    }
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 0 0 0 rgba(0, 51, 102, 0.4);
+    }
+
+    70% {
+        box-shadow: 0 0 0 10px rgba(0, 51, 102, 0);
+    }
+
+    100% {
+        box-shadow: 0 0 0 0 rgba(0, 51, 102, 0);
+    }
+}
+
+@media screen and (min-width: 769px) {
+    .timeline-item:hover .circle {
+        animation: pulse 2s ease-out infinite;
+    }
+
+}

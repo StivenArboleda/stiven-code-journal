@@ -1,0 +1,23 @@
+<div class="timeline-wrapper">
+    <h2 class="section-title">Experiencia profesional</h2>
+    <div class="timeline-container">
+      <div class="timeline-scroll">
+        <div *ngFor="let exp of experiencias; let i = index" class="timeline-item" [ngClass]="{ 'left': i % 2 === 0, 'right': i % 2 !== 0 }">
+          <div class="circle" ></div>
+          <div class="content-box">
+            <div class="brief-info">
+              <h3>{{ exp.cargo }}</h3>
+              <p class="title-empresa">{{ exp.empresa }}</p>
+              <span class="periodo">{{ exp.periodo }}</span>
+            </div>
+            <div class="full-info">
+              <h3>{{ exp.cargo }}</h3>
+              <p class="empresa">{{ exp.empresa }}</p>
+              <p class="descripcion">{{ exp.descripcion }}</p>
+              <span>{{ exp.periodo }}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -3,11 +3,12 @@ import { CommonModule } from '@angular/common';
 import { PortafolioComponent } from '../portafolio/portafolio.component';
 import { FormacionComponent } from '../formacion/formacion.component';
 import { ProyectoComponent } from '../proyecto/proyecto.component';
+import { ExperienciaComponent } from '../../experiencia/experiencia.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CommonModule, PortafolioComponent, FormacionComponent, ProyectoComponent],
+  imports: [CommonModule, PortafolioComponent, FormacionComponent, ProyectoComponent, ExperienciaComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
